@@ -22,6 +22,10 @@ const routes: Routes = [
   {
     path: 'listar-usuarios',
     loadChildren: () => import('./listar-usuarios/listar-usuarios.module').then( m => m.ListarUsuariosPageModule)
+  },
+  {
+    path: 'cadastrar-evento',
+    loadChildren: () => import('./cadastrar-evento/cadastrar-evento.module').then( m => m.CadastrarEventoPageModule)
   }
 ];
 

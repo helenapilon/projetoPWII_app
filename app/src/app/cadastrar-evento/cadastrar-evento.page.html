@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Cadastrar Evento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <form>
+      <ion-item>
+        <ion-label position="floating">Título</ion-label>
+        <ion-input type="text" name="titulo" ></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label>Descrição</ion-label>
+          <ion-textarea rows="6" cols="20" name="descricao"></ion-textarea>
+        </ion-item>
+      <ion-item>
+          <ion-label>Tipo</ion-label>
+          <ion-select placeholder="Tipo do Evento" name="tipo">
+            <ion-select-option value="esporte">Esporte</ion-select-option>
+            <ion-select-option value="cultura">Cultura</ion-select-option>
+            <ion-select-option value="lazer">Lazer</ion-select-option>
+          </ion-select>
+        </ion-item>
+      <div style="margin-top: 40px;">
+        <ion-button expand="full" color="primary">Cadastrar</ion-button>
+      </div>
+    </form>
+  </ion-list>
+</ion-content>
