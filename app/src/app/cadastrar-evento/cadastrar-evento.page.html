@@ -9,25 +9,42 @@
 
 <ion-content padding>
   <ion-list>
-    <form>
+    <form padding [formGroup]="loginForm" (submit)="login()" novalidate>
       <ion-item>
         <ion-label position="floating">Título</ion-label>
-        <ion-input type="text" name="titulo" ></ion-input>
+        <ion-input
+          [(ngModel)]="titulo"
+          formControlName="titulo"
+          type="text"
+          clearInput clearOnEdit="false" 
+        ></ion-input>
       </ion-item>
+      <h6 *ngIf="errorTitulo" class="error"> {{messageTitulo}}</h6>
       <ion-item>
-          <ion-label>Descrição</ion-label>
-          <ion-textarea rows="6" cols="20" name="descricao"></ion-textarea>
-        </ion-item>
+        <ion-label>Descrição</ion-label>
+        <ion-textarea 
+            rows="6" cols="20" 
+            [(ngModel)]="descricao"
+            formControlName="descricao"
+            clearInput clearOnEdit="false"    
+        ></ion-textarea>
+      </ion-item>
+      <h6 *ngIf="errorDescricao" class="error"> {{messageDescricao}}</h6>
       <ion-item>
-          <ion-label>Tipo</ion-label>
-          <ion-select placeholder="Tipo do Evento" name="tipo">
-            <ion-select-option value="esporte">Esporte</ion-select-option>
-            <ion-select-option value="cultura">Cultura</ion-select-option>
-            <ion-select-option value="lazer">Lazer</ion-select-option>
-          </ion-select>
-        </ion-item>
+        <ion-label>Tipo</ion-label>
+        <ion-select 
+        [(ngModel)]="tipo"
+             formControlName="tipo"
+             clearInput clearOnEdit="false"
+        >
+          <ion-select-option value="esporte">Esporte</ion-select-option>
+          <ion-select-option value="cultura">Cultura</ion-select-option>
+          <ion-select-option value="lazer">Lazer</ion-select-option>
+        </ion-select>
+      </ion-item>
+        <h6 *ngIf="errorTipo" class="error"> {{messageTipo}}</h6>
       <div style="margin-top: 40px;">
-        <ion-button expand="full" color="primary">Cadastrar</ion-button>
+        <ion-button type="submit" expand="full" color="primary">Cadastrar</ion-button>
       </div>
     </form>
   </ion-list>
