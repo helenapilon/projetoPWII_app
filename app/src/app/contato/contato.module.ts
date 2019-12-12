@@ -4,18 +4,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CadastrarEventoPageRoutingModule } from './cadastrar-evento-routing.module';
+import { ContatoPageRoutingModule } from './contato-routing.module';
 
-import { CadastrarEventoPage } from './cadastrar-evento.page';
+import { ContatoPage } from './contato.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CadastrarEventoPageRoutingModule, 
+    ContatoPageRoutingModule,
     ReactiveFormsModule
   ],
-  declarations: [CadastrarEventoPage]
+  declarations: [ContatoPage]
 })
-export class CadastrarEventoPageModule {}
+export class ContatoPageModule {}

@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="dark">
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="/home"></ion-back-button>
+      </ion-buttons>
+    <ion-title>Contato</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+      <form padding [formGroup]="loginForm" (submit)="login()" novalidate>
+        <ion-item>
+          <ion-label color='light' position="floating">Título</ion-label>
+          <ion-input
+            [(ngModel)]="titulo"
+            formControlName="titulo"
+            type="text"
+            clearInput clearOnEdit="false" 
+          ></ion-input>
+        </ion-item>
+        <h6 *ngIf="errorTitulo" class="error"> {{messageTitulo}}</h6>
+        <ion-item>
+          <ion-label color='light'>Descrição</ion-label>
+          <ion-textarea 
+              rows="6" cols="20" 
+              [(ngModel)]="descricao"
+              formControlName="descricao"
+              clearInput clearOnEdit="false"    
+          ></ion-textarea>
+        </ion-item>
+        <h6 *ngIf="errorDescricao" class="error"> {{messageDescricao}}</h6>
+        <div style="margin-top: 40px;">
+          <ion-button type="submit" expand="full" color="danger">Enviar</ion-button>
+        </div>
+      </form>
+    </ion-list>
+  </ion-content>

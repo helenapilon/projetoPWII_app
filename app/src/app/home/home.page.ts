@@ -11,8 +11,8 @@ export class HomePage {
 
   constructor(public nav: NavController, private route: Router) {}
 
-  abreCadastro(){ 
-    this.nav.navigateForward('/cadastrar-evento') 
+  abreContato(){ 
+    this.nav.navigateForward('/contato') 
   }
 
 

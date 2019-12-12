@@ -17,14 +17,14 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'List',
-      url: '/list',
-      icon: 'list'
+      title: 'Contato',
+      url: '/contato',
+      icon: 'contact'
     },
     {
-      title: 'Cadastrar Evento',
-      url: '/cadastrar-evento',
-      icon: 'add'
+      title: 'Notícias',
+      url: '/api-noticias',
+      icon: 'paper'
     }
   ];
 

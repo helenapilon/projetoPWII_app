@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ListarUsuariosPageRoutingModule } from './listar-usuarios-routing.module';
+import { ApiNoticiasPageRoutingModule } from './api-noticias-routing.module';
 
-import { ListarUsuariosPage } from './listar-usuarios.page';
+import { ApiNoticiasPage } from './api-noticias.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ListarUsuariosPageRoutingModule
+    ApiNoticiasPageRoutingModule
   ],
-  declarations: [ListarUsuariosPage]
+  declarations: [ApiNoticiasPage]
 })
-export class ListarUsuariosPageModule {}
+export class ApiNoticiasPageModule {}

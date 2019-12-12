@@ -11,21 +11,14 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   },
+
   {
-    path: 'list',
-    loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
+    path: 'contato',
+    loadChildren: () => import('./contato/contato.module').then( m => m.ContatoPageModule)
   },
   {
-    path: 'listar-eventos',
-    loadChildren: () => import('./listar-eventos/listar-eventos.module').then( m => m.ListarEventosPageModule)
-  },
-  {
-    path: 'listar-usuarios',
-    loadChildren: () => import('./listar-usuarios/listar-usuarios.module').then( m => m.ListarUsuariosPageModule)
-  },
-  {
-    path: 'cadastrar-evento',
-    loadChildren: () => import('./cadastrar-evento/cadastrar-evento.module').then( m => m.CadastrarEventoPageModule)
+    path: 'api-noticias',
+    loadChildren: () => import('./api-noticias/api-noticias.module').then( m => m.ApiNoticiasPageModule)
   }
 ];
 

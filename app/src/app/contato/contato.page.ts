@@ -3,31 +3,28 @@ import { FormBuilder, Validators, } from '@angular/forms';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-cadastrar-evento',
-  templateUrl: './cadastrar-evento.page.html',
-  styleUrls: ['./cadastrar-evento.page.scss'],
+  selector: 'app-contato',
+  templateUrl: './contato.page.html',
+  styleUrls: ['./contato.page.scss'],
 })
-export class CadastrarEventoPage implements OnInit {
-
+export class ContatoPage implements OnInit {
+  
   public loginForm: any;
   messageTitulo = ""
   messageDescricao = "";
-  messageTipo = "";
   errorTitulo = false;
   errorDescricao = false;
-  errorTipo = false;
 
   constructor(formBuilder: FormBuilder) {
 
     this.loginForm = formBuilder.group({
       titulo: ['', Validators.required],
       descricao: ['', Validators.required],
-      tipo: ['', Validators.required],
     });
    }
 
    login() {
-    let { titulo, descricao, tipo } = this.loginForm.controls;
+    let { titulo, descricao } = this.loginForm.controls;
 
     if (!this.loginForm.valid) {
       if (!titulo.valid) {
@@ -39,16 +36,9 @@ export class CadastrarEventoPage implements OnInit {
 
       if (!descricao.valid) {
         this.errorDescricao = true;
-        this.messageDescricao = "Ops! Preencha o descrição";
+        this.messageDescricao = "Ops! Preencha a descrição";
       } else {
         this.messageDescricao = "";
-      }
-
-      if (!tipo.valid) {
-        this.errorTipo = true;
-        this.messageTipo = "Ops! Preencha o tipo";
-      } else {
-        this.messageTipo = "";
       }
 
     }
