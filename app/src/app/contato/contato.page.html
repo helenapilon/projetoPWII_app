@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="dark">
+  <ion-toolbar color='primary'>
       <ion-buttons slot="start">
           <ion-back-button defaultHref="/home"></ion-back-button>
       </ion-buttons>
@@ -7,11 +7,11 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content color="dark" padding>
     <ion-list>
       <form padding [formGroup]="loginForm" (submit)="login()" novalidate>
         <ion-item>
-          <ion-label color='light' position="floating">Título</ion-label>
+          <ion-label position="floating">Título</ion-label>
           <ion-input
             [(ngModel)]="titulo"
             formControlName="titulo"
@@ -21,7 +21,7 @@
         </ion-item>
         <h6 *ngIf="errorTitulo" class="error"> {{messageTitulo}}</h6>
         <ion-item>
-          <ion-label color='light'>Descrição</ion-label>
+          <ion-label >Descrição</ion-label>
           <ion-textarea 
               rows="6" cols="20" 
               [(ngModel)]="descricao"
